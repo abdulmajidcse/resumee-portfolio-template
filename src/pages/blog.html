@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="./../dist/fontawesome/css/all.min.css" />
     <script defer src="./../dist/js/alpinejs.min.js"></script>
   </head>
-  <body x-data class="dark:bg-slate-900 dark:text-gray-100">
+  <body x-data class="bg-gray-200 dark:bg-slate-900 dark:text-gray-100">
     <nav class="navbar">
       <div class="flex flex-wrap items-center justify-between">
         <button
@@ -31,7 +31,9 @@
           </p>
         </a>
 
-        <div class="mr-3 lg:m-0">
+        <div
+          class="mr-3 lg:m-0 lg:bg-blue-900 lg:dark:bg-gray-900 transition-all duration-200"
+        >
           <button onclick="toggleTheme()" type="button" class="theme-button">
             <!-- dark theme icon -->
             <i id="dark_theme_icon" class="fa-solid fa-moon !hidden"></i>
