@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About - A Resume Blog</title>
+    <title>Post - A Resume Blog</title>
     <link href="./../dist/css/app.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="./../dist/fontawesome/css/all.min.css" />
     <script defer src="./../dist/js/alpinejs.min.js"></script>
@@ -79,10 +79,10 @@
             <a href="./../index.html" class="sidebar-link">Home</a>
           </li>
           <li>
-            <a href="./blog.html" class="sidebar-link">Blog</a>
+            <a href="./blog.html" class="sidebar-link active">Blog</a>
           </li>
           <li>
-            <a href="./about.html" class="sidebar-link active">About</a>
+            <a href="./about.html" class="sidebar-link">About</a>
           </li>
           <li>
             <a href="./contact.html" class="sidebar-link">Contact</a>
@@ -97,56 +97,27 @@
       :class="{ 'lg:ml-80' : $store.sidebar.open }"
     >
       <main class="max-w-3xl mx-auto">
-        <!-- about me -->
         <section class="section">
-          <h2 class="font-teko text-5xl">About Me</h2>
-
-          <div
-            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7"
-          >
-            <p class="mb-5">
-              Hi, welcome to my blog. If you have landed on my site searching
-              for me then I am glad you are interested about me, nice.
-            </p>
-            <p class="mb-5">
-              I am <span class="italic">Md Abdul Majid</span>, a Full-Stack Web
-              Developer. I am experiened more than 2 years and working with
-              <a
-                href="https://laravel.com"
-                target="_blank"
-                class="text-blue-700 hover:theme-text-color"
-                >Laravel</a
-              >,
-              <a
-                href="https://reactjs.org"
-                target="_blank"
-                class="text-blue-700 hover:theme-text-color"
-                >ReactJS</a
-              >
-              and
-              <a
-                href="https://nextjs.org"
-                target="_blank"
-                class="text-blue-700 hover:theme-text-color"
-                >NextJS</a
-              >. Programming is not only my profession but also a passon!
-            </p>
-            <p class="mb-5">
-              My aim is to bring across your message and identity in the most
-              creative way. I created web design and development for many famous
-              brand companies. I have already developed more than 6 web
-              applications for Govt and Private Institutes.
-            </p>
-            <p class="mb-5">
-              I love to share my knowledge on this
-              <a
-                href="#"
-                target="_blank"
-                class="text-blue-700 hover:theme-text-color"
-                >blog</a
-              >, mostly technical. I enjoy learing new things and building
-              something new. Follow me to stay updated.
-            </p>
+          <div class="font-poppins mb-4">
+            <a
+              href="./post.html"
+              class="text-slate-500 dark:text-white hover:text-blue-800 hover:dark:text-blue-500 hover:underline"
+              >30 December 2022</a
+            >
+          </div>
+          <h2 class="font-teko text-4xl lg:text-5xl mb-2">
+            Laravel Role Permission Management!
+          </h2>
+          <div class="font-poppins text-lg text-slate-700 dark:text-white/70">
+            <div class="mb-5">
+              <p>
+                The standard chunk of Lorem Ipsum used since the 1500s is
+                reproduced below for those interested. Sections 1.10.32 and
+                1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also
+                reproduced in their exact original form, accompanied by English
+                versions from the 1914 translation by H. Rackham.
+              </p>
+            </div>
             <p class="mb-5">
               Lorem Ipsum is simply dummy text of the printing and typesetting
               industry. Lorem Ipsum has been the industry's standard dummy text

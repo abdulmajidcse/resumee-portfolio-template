@@ -92,8 +92,11 @@
     </div>
 
     <!-- main section lg:ml-80 because sidebar w-80 -->
-    <div :class="{ 'lg:ml-80' : $store.sidebar.open }">
-      <main>
+    <div
+      class="bg-gray-200 dark:bg-inherit"
+      :class="{ 'lg:ml-80' : $store.sidebar.open }"
+    >
+      <main class="max-w-3xl mx-auto">
         <section class="section">
           <h2 class="font-teko text-5xl">Contact</h2>
           <div
