@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" class="awesome-scrollbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog - A Resume Blog</title>
+    <link href="./../dist/css/app.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./../dist/fontawesome/css/all.min.css" />
+    <script defer src="./../dist/js/alpinejs.min.js"></script>
+  </head>
+  <body x-data class="dark:bg-slate-900 dark:text-gray-100">
+    <nav class="navbar">
+      <div class="flex flex-wrap items-center justify-between">
+        <button
+          type="button"
+          class="sidebar-toggle-button"
+          x-on:click="$store.sidebar.toggle()"
+        >
+          <span class="sr-only">Open sidebar menu</span>
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <a href="./index.html" class="lg:hidden font-teko pt-1">
+          <h2
+            class="text-indigo-600 dark:theme-text-color uppercase text-3xl font-bold text-center leading-5"
+          >
+            Abdul Majid
+          </h2>
+          <p class="text-slate-400 text-center text-base">
+            Full-Stack Web Developer
+          </p>
+        </a>
+
+        <div class="mr-3 lg:m-0">
+          <button onclick="toggleTheme()" type="button" class="theme-button">
+            <!-- dark theme icon -->
+            <i id="dark_theme_icon" class="fa-solid fa-moon !hidden"></i>
+            <!-- light theme icon -->
+            <i id="light_theme_icon" class="fa-solid fa-sun !hidden"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar overlay -->
+    <div
+      class="sidebar-overlay"
+      :class="$store.sidebar.open ? 'lg:hidden' : 'hidden'"
+      x-on:click="$store.sidebar.open = false"
+    ></div>
+
+    <!-- sidebar -->
+    <div
+      class="sidebar awesome-scrollbar"
+      :class="{ '-left-96' : !$store.sidebar.open }"
+    >
+      <button
+        type="button"
+        class="sidebar-close-button"
+        x-on:click="$store.sidebar.open = false"
+      >
+        <i class="fa-solid fa-close text-xl"></i>
+        <span class="sr-only">Close menu</span>
+      </button>
+
+      <div class="mt-14 lg:mt-11 flex justify-center items-center">
+        <a href="./index.html">
+          <img
+            src="./../dist/img/profile.jpg"
+            alt="Abdul Majid"
+            class="rounded-full shadow-xl w-44 h-44 border-[0.5rem] border-blue-800/80 dark:border-slate-700"
+          />
+        </a>
+      </div>
+
+      <div class="pb-4 overflow-y-auto mt-8">
+        <ul class="space-y-2 px-5">
+          <li>
+            <a href="./../index.html" class="sidebar-link">Home</a>
+          </li>
+          <li>
+            <a href="./blog.html" class="sidebar-link active">Blog</a>
+          </li>
+          <li>
+            <a href="./about.html" class="sidebar-link">About</a>
+          </li>
+          <li>
+            <a href="./contact.html" class="sidebar-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main section lg:ml-80 because sidebar w-80 -->
+    <div :class="{ 'lg:ml-80' : $store.sidebar.open }">
+      <main>
+        <section class="section">
+          <h2 class="font-teko text-6xl">Blog</h2>
+          <div
+            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
+          >
+            <p class="mb-5">
+              Feel free to contact with me. I am available for hire.
+            </p>
+            <p class="mb-5">
+              Use the form below or alternatively send email to abdulmajid at
+              gmail dot com
+            </p>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>&copy; 2022 Abdul Majid. All rights are reserved.</p>
+      </footer>
+    </div>
+
+    <script src="./../dist/js/flowbite.js"></script>
+    <script src="./../dist/js/app.js"></script>
+  </body>
+</html>
