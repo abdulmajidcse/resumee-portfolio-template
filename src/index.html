@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en" class="awesome-scrollbar">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home - A Resume Blog</title>
+    <link href="./dist/css/app.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
+    <script defer src="./dist/js/alpinejs.min.js"></script>
+  </head>
+  <body x-data class="dark:bg-slate-900 dark:text-gray-100">
+    <nav class="navbar">
+      <div class="flex flex-wrap items-center justify-between">
+        <button
+          type="button"
+          class="sidebar-toggle-button"
+          x-on:click="$store.sidebar.toggle()"
+        >
+          <span class="sr-only">Open sidebar menu</span>
+          <i class="fa-solid fa-bars text-xl"></i>
+        </button>
+
+        <a href="./index.html" class="lg:hidden font-teko pt-1">
+          <h2
+            class="text-indigo-600 dark:theme-text-color uppercase text-3xl font-bold text-center leading-5"
+          >
+            Abdul Majid
+          </h2>
+          <p class="text-slate-400 text-center text-base">
+            Full-Stack Web Developer
+          </p>
+        </a>
+
+        <div class="mr-3 lg:m-0">
+          <button onclick="toggleTheme()" type="button" class="theme-button">
+            <!-- dark theme icon -->
+            <i id="dark_theme_icon" class="fa-solid fa-moon !hidden"></i>
+            <!-- light theme icon -->
+            <i id="light_theme_icon" class="fa-solid fa-sun !hidden"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- sidebar overlay -->
+    <div
+      class="sidebar-overlay"
+      :class="$store.sidebar.open ? 'lg:hidden' : 'hidden'"
+      x-on:click="$store.sidebar.open = false"
+    ></div>
+
+    <!-- sidebar -->
+    <div
+      class="sidebar awesome-scrollbar"
+      :class="{ '-left-96' : !$store.sidebar.open }"
+    >
+      <button
+        type="button"
+        class="sidebar-close-button"
+        x-on:click="$store.sidebar.open = false"
+      >
+        <i class="fa-solid fa-close text-xl"></i>
+        <span class="sr-only">Close menu</span>
+      </button>
+
+      <div class="mt-14 lg:mt-11 flex justify-center items-center">
+        <a href="./index.html">
+          <img
+            src="./dist/img/profile.jpg"
+            alt="Abdul Majid"
+            class="rounded-full shadow-xl w-44 h-44 border-[0.5rem] border-blue-800/80 dark:border-slate-700"
+          />
+        </a>
+      </div>
+
+      <div class="pb-4 overflow-y-auto mt-8">
+        <ul class="space-y-2 px-5">
+          <li>
+            <a href="#" class="sidebar-link active">Home</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">Blog</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">About</a>
+          </li>
+          <li>
+            <a href="#" class="sidebar-link">Contact</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- main section lg:ml-80 because sidebar w-80 -->
+    <main :class="{ 'lg:ml-80' : $store.sidebar.open }">
+      <!-- about me -->
+      <section class="section">
+        <h2 class="font-teko text-6xl">Hi, I'm Abdul Majid!</h2>
+        <div
+          class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7"
+        >
+          <p class="mb-5">
+            I am <span class="italic">Md Abdul Majid</span>, a Full-Stack Web
+            Developer. I am experiened more than 2 years and working with
+            <a
+              href="https://laravel.com"
+              target="_blank"
+              class="text-blue-700 hover:theme-text-color"
+              >Laravel</a
+            >,
+            <a
+              href="https://reactjs.org"
+              target="_blank"
+              class="text-blue-700 hover:theme-text-color"
+              >ReactJS</a
+            >
+            and
+            <a
+              href="https://nextjs.org"
+              target="_blank"
+              class="text-blue-700 hover:theme-text-color"
+              >NextJS</a
+            >. Programming is not only my profession but also a passon!
+          </p>
+          <p class="mb-5">
+            My aim is to bring across your message and identity in the most
+            creative way. I created web design and development for many famous
+            brand companies. I have already developed more than 6 web
+            applications for Govt and Private Institutes.
+          </p>
+          <p class="mb-5">
+            I love to share my knowledge on this
+            <a
+              href="#"
+              target="_blank"
+              class="text-blue-700 hover:theme-text-color"
+              >blog</a
+            >, mostly technical. I enjoy learing new things and building
+            something new. Follow me to stay updated.
+          </p>
+        </div>
+      </section>
+      <!-- social profiles -->
+      <section class="section">
+        <div class="flex-none md:flex">
+          <div class="md:max-w-md">
+            <h2 class="font-teko text-3xl">Recent Blog Posts</h2>
+            <div class="flex flex-col mt-5">
+              <a
+                href="#"
+                class="text-blue-700 hover:theme-text-color border-t border-slate-300 dark:border-gray-700 py-3"
+                >Laravel Role Permission Management!</a
+              >
+              <a
+                href="#"
+                class="text-blue-700 hover:theme-text-color border-t border-slate-300 dark:border-gray-700 py-3"
+                >Laravel API Boilerplate for starting application.</a
+              >
+              <a
+                href="#"
+                class="text-blue-700 hover:theme-text-color border-t border-slate-300 dark:border-gray-700 py-3"
+                >How to setup ReactJS with Laravel</a
+              >
+              <a
+                href="#"
+                class="text-blue-700 hover:theme-text-color border-t border-slate-300 dark:border-gray-700 py-3"
+                >Forgot password reset with Code in Laravel and NextJS!</a
+              >
+              <a
+                href="#"
+                class="text-blue-700 hover:theme-text-color border-t border-slate-300 dark:border-gray-700 py-3"
+                >Backup your Database in Laravel App.</a
+              >
+            </div>
+          </div>
+          <div class="mt-8 md:mt-0 md:ml-12">
+            <h2 class="font-teko text-3xl">Social Profiles</h2>
+            <div class="space-x-2 my-5">
+              <a
+                href="#"
+                target="_blank"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-facebook-f text-xl"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-twitter text-xl"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-instagram text-xl"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-linkedin-in text-xl"></i
+              ></a>
+              <a
+                href="#"
+                target="_blank"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-github text-xl"></i
+              ></a>
+              <a
+                href="#"
+                class="hover:text-white hover:theme-bg-color bg-indigo-400 dark:bg-blue-500 dark:hover:theme-bg-color px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mb-3"
+                ><i class="fa-brands fa-youtube text-xl"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="section footer">
+        <p>&copy; 2022 Abdul Majid. All rights are reserved.</p>
+      </footer>
+    </main>
+
+    <script src="./dist/js/flowbite.js"></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>
