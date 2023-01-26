@@ -8,7 +8,11 @@
     <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
     <script defer src="./dist/js/alpinejs.min.js"></script>
   </head>
-  <body x-data class="bg-gray-200 dark:bg-slate-900 dark:text-gray-100">
+  <body
+    x-data
+    class="bg-gray-200 dark:bg-slate-900 dark:text-gray-100"
+    id="page-top"
+  >
     <nav class="navbar">
       <div class="flex flex-wrap items-center justify-between">
         <button
@@ -20,9 +24,9 @@
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
 
-        <a href="./index.html" class="lg:hidden font-teko pt-1">
+        <a href="#page-top" class="lg:hidden font-teko pt-1">
           <h2
-            class="text-indigo-600 dark:theme-text-color uppercase text-3xl font-bold text-center leading-5"
+            class="text-indigo-600 uppercase text-3xl font-bold text-center leading-5"
           >
             Abdul Majid
           </h2>
@@ -31,9 +35,7 @@
           </p>
         </a>
 
-        <div
-          class="mr-3 lg:m-0 lg:bg-blue-900 lg:dark:bg-gray-900 transition-all duration-200"
-        >
+        <div class="mr-3 lg:m-0 lg:bg-blue-900">
           <button onclick="toggleTheme()" type="button" class="theme-button">
             <!-- dark theme icon -->
             <i id="dark_theme_icon" class="fa-solid fa-moon !hidden"></i>
@@ -56,21 +58,12 @@
       class="sidebar awesome-scrollbar"
       :class="{ '-left-96' : !$store.sidebar.open }"
     >
-      <button
-        type="button"
-        class="sidebar-close-button"
-        x-on:click="$store.sidebar.open = false"
-      >
-        <i class="fa-solid fa-close text-xl"></i>
-        <span class="sr-only">Close menu</span>
-      </button>
-
-      <div class="mt-14 lg:mt-11 flex justify-center items-center">
-        <a href="./index.html">
+      <div class="mt-16 lg:mt-11 flex justify-center items-center">
+        <a href="#page-top">
           <img
             src="./dist/img/profile.jpg"
             alt="Abdul Majid"
-            class="rounded-full shadow-xl w-44 h-44 border-[0.5rem] border-blue-800/80 dark:border-slate-700"
+            class="rounded-full shadow-xl w-44 h-44 border-[0.5rem] border-blue-800/80"
           />
         </a>
       </div>
@@ -78,16 +71,10 @@
       <div class="pb-4 overflow-y-auto mt-8">
         <ul class="space-y-2 px-5">
           <li>
-            <a href="./index.html" class="sidebar-link active">Home</a>
+            <a href="#about" class="sidebar-link">About</a>
           </li>
           <li>
-            <a href="./pages/blog.html" class="sidebar-link">Blog</a>
-          </li>
-          <li>
-            <a href="./pages/about.html" class="sidebar-link">About</a>
-          </li>
-          <li>
-            <a href="./pages/contact.html" class="sidebar-link">Contact</a>
+            <a href="#contact" class="sidebar-link">Contact</a>
           </li>
         </ul>
       </div>
@@ -100,7 +87,7 @@
     >
       <main class="max-w-3xl mx-auto">
         <!-- about me -->
-        <section class="section">
+        <section class="section" id="about">
           <h2 class="font-teko text-4xl sm:text-5xl">Hi, I'm Abdul Majid!</h2>
           <div
             class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7"
@@ -221,6 +208,102 @@
               </div>
             </div>
           </div>
+        </section>
+
+        <section class="section" id="contact">
+          <h2 class="font-teko text-5xl">Contact</h2>
+          <div
+            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
+          >
+            <p class="mb-5">
+              Feel free to contact with me. I am available for hire.
+            </p>
+            <p class="mb-5">
+              Use the form below or alternatively send email to abdulmajid at
+              gmail dot com
+            </p>
+          </div>
+
+          <form class="font-poppins">
+            <div class="grid md:grid-cols-2 md:gap-6">
+              <div class="mb-6">
+                <label
+                  for="first_name"
+                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+                  >First Name</label
+                >
+                <input
+                  type="text"
+                  id="first_name"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  required
+                />
+              </div>
+
+              <div class="mb-6">
+                <label
+                  for="last_name"
+                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+                  >Last Name</label
+                >
+                <input
+                  type="text"
+                  id="last_name"
+                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                  required
+                />
+              </div>
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="email"
+                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+                >Email</label
+              >
+              <input
+                type="email"
+                id="email"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="subject"
+                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+                >Subject</label
+              >
+              <input
+                type="text"
+                id="subject"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                required
+              />
+            </div>
+
+            <div class="mb-6">
+              <label
+                for="message"
+                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
+                >Message</label
+              >
+              <textarea
+                id="message"
+                rows="6"
+                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
+                required
+              ></textarea>
+            </div>
+
+            <button
+              type="submit"
+              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 uppercase"
+            >
+              <strong>Submit Query</strong>
+            </button>
+          </form>
         </section>
       </main>
 
