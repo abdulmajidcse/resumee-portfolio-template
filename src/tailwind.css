@@ -13,7 +13,7 @@
     @apply bg-purple-600;
   }
   .awesome-scrollbar {
-    @apply scrollbar-thin scrollbar-thumb-purple-400 scrollbar-track-slate-400;
+    @apply scrollbar-thin scrollbar-thumb-purple-800 scrollbar-track-slate-800;
   }
   .navbar {
     @apply bg-blue-900 border-gray-200 px-2 sm:px-4 py-2.5 transition-all duration-200 sticky top-0 lg:inline-block lg:fixed lg:top-2 lg:left-64 z-50 lg:p-0 lg:bg-inherit lg:dark:bg-inherit;
