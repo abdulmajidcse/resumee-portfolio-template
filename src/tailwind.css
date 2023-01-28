@@ -34,7 +34,7 @@
     @apply flex items-center text-[20px] font-[400] py-2 tracking-[.1em] border-b border-white/50 text-white/70 hover:theme-text-color;
   }
   .section {
-    @apply px-5 py-10 border-b border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 odd:bg-slate-50 odd:dark:bg-slate-800;
+    @apply px-5 py-20 border-b border-slate-300 dark:border-gray-700 bg-white dark:bg-gray-800 odd:bg-slate-50 odd:dark:bg-slate-800;
   }
   .footer {
     @apply py-10 flex justify-center items-center text-center font-poppins font-semibold text-base text-gray-500 dark:text-white/60;
