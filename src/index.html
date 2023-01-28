@@ -24,7 +24,7 @@
           <i class="fa-solid fa-bars text-xl"></i>
         </button>
 
-        <a href="#page-top" class="lg:hidden font-teko pt-1">
+        <a href="#page-top" class="lg:hidden font-teko pt-1 scrollspy">
           <h2
             class="text-indigo-600 uppercase text-3xl font-bold text-center leading-5"
           >
@@ -59,7 +59,7 @@
       :class="{ '-left-96' : !$store.sidebar.open }"
     >
       <div class="mt-16 lg:mt-11 flex justify-center items-center">
-        <a href="#page-top">
+        <a href="#page-top" class="scrollspy">
           <img
             src="./dist/img/profile.jpg"
             alt="Abdul Majid"
@@ -71,28 +71,68 @@
       <div class="pb-4 overflow-y-auto mt-8">
         <ul class="space-y-2 px-5">
           <li>
-            <a href="#about" class="sidebar-link active">About</a>
+            <a
+              href="#about"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#page-top' || $store.activeLink.name == '#about' }"
+              >About</a
+            >
           </li>
           <li>
-            <a href="#skills" class="sidebar-link">Skills</a>
+            <a
+              href="#skills"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#skills' }"
+              >Skills</a
+            >
           </li>
           <li>
-            <a href="#experience" class="sidebar-link">Experience</a>
+            <a
+              href="#experience"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#experience' }"
+              >Experience</a
+            >
           </li>
           <li>
-            <a href="#education" class="sidebar-link">Education</a>
+            <a
+              href="#education"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#education' }"
+              >Education</a
+            >
           </li>
           <li>
-            <a href="#portfolio" class="sidebar-link">Portfolio</a>
+            <a
+              href="#portfolio"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#portfolio' }"
+              >Portfolio</a
+            >
           </li>
           <li>
-            <a href="#interests" class="sidebar-link">Interests</a>
+            <a
+              href="#interests"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#interests' }"
+              >Interests</a
+            >
           </li>
           <li>
-            <a href="#contact" class="sidebar-link">Contact</a>
+            <a
+              href="#contact"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#contact' }"
+              >Contact</a
+            >
           </li>
           <li>
-            <a href="#source-code" class="sidebar-link">Source Code</a>
+            <a
+              href="#source-code"
+              class="sidebar-link scrollspy"
+              :class="{ 'active' : $store.activeLink.name == '#source-code' }"
+              >Source Code</a
+            >
           </li>
         </ul>
       </div>

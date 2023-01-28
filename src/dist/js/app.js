@@ -47,6 +47,10 @@ window.addEventListener("alpine:init", function () {
     },
   });
 
+  Alpine.store("activeLink", {
+    name: "#about",
+  });
+
   function sidebarHideOnMobile(e) {
     if (e.matches) {
       // in lg screen
@@ -61,4 +65,20 @@ window.addEventListener("alpine:init", function () {
   windowWidthLg.addEventListener("change", sidebarHideOnMobile);
 
   sidebarHideOnMobile(windowWidthLg);
+
+  // scrollspy fuctionality
+  const scrollspys = document.querySelectorAll("a.scrollspy");
+  scrollspys.forEach(function (anchorTag) {
+    const linkName = anchorTag.getAttribute("href");
+
+    const currentUrl = document.URL;
+    if (currentUrl.search(linkName) > 0) {
+      Alpine.store("activeLink").name = linkName;
+    }
+
+    anchorTag.addEventListener("click", function (e) {
+      Alpine.store("activeLink").name = linkName;
+      sidebarHideOnMobile(windowWidthLg);
+    });
+  });
 });
