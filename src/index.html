@@ -71,60 +71,25 @@
       <div class="pb-4 overflow-y-auto mt-8">
         <ul class="space-y-2 px-5">
           <li>
-            <a
-              href="#about"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#page-top' || $store.activeLink.name == '#about' }"
-              >About</a
-            >
+            <a href="#about" class="sidebar-link scrollspy">About</a>
           </li>
           <li>
-            <a
-              href="#skills"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#skills' }"
-              >Skills</a
-            >
+            <a href="#skills" class="sidebar-link scrollspy">Skills</a>
           </li>
           <li>
-            <a
-              href="#experience"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#experience' }"
-              >Experience</a
-            >
+            <a href="#experience" class="sidebar-link scrollspy">Experience</a>
           </li>
           <li>
-            <a
-              href="#education"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#education' }"
-              >Education</a
-            >
+            <a href="#education" class="sidebar-link scrollspy">Education</a>
           </li>
           <li>
-            <a
-              href="#portfolio"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#portfolio' }"
-              >Portfolio</a
-            >
+            <a href="#portfolio" class="sidebar-link scrollspy">Portfolio</a>
           </li>
           <li>
-            <a
-              href="#interests"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#interests' }"
-              >Interests</a
-            >
+            <a href="#interests" class="sidebar-link scrollspy">Interests</a>
           </li>
           <li>
-            <a
-              href="#contact"
-              class="sidebar-link scrollspy"
-              :class="{ 'active' : $store.activeLink.name == '#contact' }"
-              >Contact</a
-            >
+            <a href="#contact" class="sidebar-link scrollspy">Contact</a>
           </li>
         </ul>
       </div>
@@ -176,11 +141,11 @@
               enjoy learing new things and building something new.
             </p>
           </div>
-        </section>
 
-        <!-- recent development projects & social profiles -->
-        <section class="section">
-          <div class="flex-none md:flex">
+          <!-- recent development projects & social profiles -->
+          <div
+            class="flex-none md:flex mt-8 md:pt-8 md:border-t border-slate-300 dark:border-gray-700"
+          >
             <div class="md:max-w-md">
               <h2 class="font-teko text-3xl">Recent Development Projects</h2>
               <div class="flex flex-col mt-5">
@@ -889,17 +854,14 @@
           <div
             class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
           >
-            <p class="mb-5">
-              Being a web developer, most of the time web application
-              development goes away. Still, I try to visit different places
-              whenever I have time. I like eating and drinking outside, talking
-              with friends and family in my spare time. Sometimes I try to play
-              a little.
-            </p>
-            <p class="mb-5">
-              Still, try to think something new or learn something new about web
-              development.
-            </p>
+            <div>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Programming</p>
+              <p>
+                <i class="fa-solid fa-check text-lg mr-1"></i> Problem Solving
+              </p>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Research</p>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Traveling</p>
+            </div>
           </div>
         </section>
 

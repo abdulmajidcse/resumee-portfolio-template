@@ -48,7 +48,6 @@ window.addEventListener("load", function () {
           entries.forEach((entry) => {
             // `entry.isIntersecting` will be true if the element is visible
             if (entry.isIntersecting) {
-              console.log(entry);
               const sidebarLinks = document.querySelectorAll("a.scrollspy");
               sidebarLinks.forEach(function (sidebarLink) {
                 if (sidebarLink.getAttribute("href") == linkName) {
@@ -60,7 +59,7 @@ window.addEventListener("load", function () {
             }
           });
         },
-        { rootMargin: "-300px 0px 0px 0px" }
+        { rootMargin: "-300px 0px -50px 0px" }
       );
       // Adding the observer to the element
       observerInit.observe(section);
@@ -75,10 +74,6 @@ window.addEventListener("alpine:init", function () {
     toggle() {
       this.open = !this.open;
     },
-  });
-
-  Alpine.store("activeLink", {
-    name: "#about",
   });
 
   function sidebarHideOnMobile(e) {
@@ -99,15 +94,7 @@ window.addEventListener("alpine:init", function () {
   // scrollspy fuctionality
   const scrollspys = document.querySelectorAll("a.scrollspy");
   scrollspys.forEach(function (anchorTag) {
-    const linkName = anchorTag.getAttribute("href");
-
-    const currentUrl = document.URL;
-    if (currentUrl.search(linkName) > 0) {
-      Alpine.store("activeLink").name = linkName;
-    }
-
     anchorTag.addEventListener("click", function (e) {
-      Alpine.store("activeLink").name = linkName;
       sidebarHideOnMobile(windowWidthLg);
     });
   });
