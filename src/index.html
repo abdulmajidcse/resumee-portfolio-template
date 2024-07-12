@@ -56,7 +56,6 @@
   <body
     x-data
     class="bg-white dark:bg-slate-900 dark:text-gray-100 transition-all duration-300 bg-[url('/src/dist/img/dots.svg')]"
-    id="page-top"
   >
     <div class="max-w-[1080px] mx-auto">
       <div class="grid grid-cols-3 md:mt-[55px]">
@@ -65,9 +64,9 @@
           <div class="flex justify-end">
             <button onclick="toggleTheme()" type="button" class="theme-button">
               <!-- dark theme icon -->
-              <i id="dark_theme_icon" class="fa-solid fa-moon !hidden"></i>
+              <i class="dark_theme_icon fa-solid fa-moon !hidden"></i>
               <!-- light theme icon -->
-              <i id="light_theme_icon" class="fa-solid fa-sun !hidden"></i>
+              <i class="light_theme_icon fa-solid fa-sun !hidden"></i>
             </button>
           </div>
 
@@ -75,24 +74,27 @@
             <img
               src="./dist/img/abdul-majid.jpg"
               alt="Abdul Majid"
-              class="rounded-full shadow-xl w-[250px] h-[250px] border-[0.5rem] border-slate-200 dark:border-slate-800/50 cursor-pointer"
-              onclick="toggleTheme()"
+              class="rounded-full shadow-xl w-[250px] h-[250px] border-[0.5rem] border-slate-200 dark:border-slate-800/50"
             />
           </div>
 
           <div class="pb-4 mt-8">
             <ul class="space-y-2 md:mr-10">
               <li>
-                <a href="javascript:void()" class="sidebar-link active">Home</a>
+                <a href="./index.html" class="sidebar-link active">Home</a>
               </li>
               <li>
                 <a href="javascript:void()" class="sidebar-link">Blog</a>
               </li>
               <li>
-                <a href="javascript:void()" class="sidebar-link">About</a>
+                <a href="./about.html" class="sidebar-link">About</a>
               </li>
               <li>
-                <a href="https://www.youtube.com/@abdulmajidcse/" class="sidebar-link">Screencasts</a>
+                <a
+                  href="https://www.youtube.com/@abdulmajidcse/"
+                  class="sidebar-link"
+                  >Screencasts</a
+                >
               </li>
               <li>
                 <a href="./contact.html" class="sidebar-link">Contact</a>
@@ -101,7 +103,6 @@
           </div>
         </div>
 
-        <!-- main section lg:ml-80 because sidebar w-80 -->
         <div class="col-span-3 md:col-span-2">
           <main class="md:ml-8 mb-10">
             <!-- about me -->

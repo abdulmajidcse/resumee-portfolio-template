@@ -1,0 +1,942 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Abdul Majid - Full-Stack Web Developer</title>
+    <link rel="icon" type="image/x-icon" href="./dist/img/abdul-majid.jpg" />
+
+    <meta name="robots" content="ALL, FOLLOW, INDEX" />
+    <meta name="locale" content="en_US" />
+    <meta name="type" content="website" />
+    <meta name="author" content="Md Abdul Majid" />
+    <meta property="og:type" content="website" />
+    <meta property="og:author" content="Md Abdul Majid" />
+    <meta property="og:locale" content="en_US" />
+    <meta name="title" content="Abdul Majid - Full-Stack Web Developer" />
+    <meta
+      name="description"
+      content="Professional Full-Stack Web Developer and working with Laravel, Livewire, AlpineJS, jQuery, VueJS"
+    />
+    <meta
+      name="keywords"
+      content="abdul majid, web developer, Full-Stack web developer, abdul majid cse, abdul majid bd, professional web developer, laravel, laravel-livewire, Vuejs"
+    />
+    <meta name="image" content="./dist/img/abdul-majid.jpg" />
+
+    <meta
+      property="og:title"
+      content="Abdul Majid - Full-Stack Web Developer"
+    />
+    <meta
+      property="og:description"
+      content="Professional Full-Stack Web Developer and working with Laravel, Livewire, AlpineJS, jQuery, VueJS"
+    />
+    <meta
+      property="og:keywords"
+      content="abdul majid, web developer, Full-Stack web developer, abdul majid cse, abdul majid bd, professional web developer, laravel, laravel-livewire, Vuejs"
+    />
+    <meta property="og:image" content="./dist/img/abdul-majid.jpg" />
+
+    <meta
+      name="twitter:title"
+      content="Abdul Majid - Full-Stack Web Developer"
+    />
+    <meta
+      name="twitter:description"
+      content="Professional Full-Stack Web Developer and working with Laravel, Livewire, AlpineJS, jQuery, VueJS"
+    />
+    <meta name="twitter:image" content="./dist/img/abdul-majid.jpg" />
+    <meta name="twitter:card" content="./dist/img/abdul-majid.jpg" />
+
+    <link href="./dist/css/app.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./dist/fontawesome/css/all.min.css" />
+    <script defer src="./dist/js/alpinejs.min.js"></script>
+  </head>
+  <body
+    x-data
+    class="bg-white dark:bg-slate-900 dark:text-gray-100 transition-all duration-300 bg-[url('/src/dist/img/dots.svg')]"
+  >
+    <nav class="py-5 border-b border-slate-900/10 dark:border-gray-700">
+      <div
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4"
+      >
+        <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+          <span
+            class="self-center text-2xl font-semibold whitespace-nowrap dark:text-white"
+            >Abdul Majid</span
+          >
+        </a>
+
+        <div>
+          <button
+            onclick="toggleTheme()"
+            type="button"
+            class="theme-button md:hidden"
+          >
+            <!-- dark theme icon -->
+            <i class="dark_theme_icon fa-solid fa-moon !hidden"></i>
+            <!-- light theme icon -->
+            <i class="light_theme_icon fa-solid fa-sun !hidden"></i>
+          </button>
+
+          <button
+            data-collapse-toggle="navbar-dropdown"
+            type="button"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            aria-controls="navbar-dropdown"
+            aria-expanded="false"
+          >
+            <span class="sr-only">Open main menu</span>
+            <svg
+              class="w-5 h-5"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 17 14"
+            >
+              <path
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M1 1h15M1 7h15M1 13h15"
+              />
+            </svg>
+          </button>
+        </div>
+
+        <div class="hidden w-full md:block md:w-auto" id="navbar-dropdown">
+          <ul
+            class="flex flex-col font-medium p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 md:border-0 md:bg-inherit dark:bg-gray-800 md:dark:bg-inherit dark:border-gray-700"
+          >
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 md:dark:text-blue-500 dark:bg-blue-600 md:dark:bg-transparent"
+                aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Blog</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Screencasts</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                >Contact</a
+              >
+            </li>
+            <li class="hidden md:block">
+              <button
+                onclick="toggleTheme()"
+                type="button"
+                class="theme-button"
+              >
+                <!-- dark theme icon -->
+                <i class="dark_theme_icon fa-solid fa-moon !hidden"></i>
+                <!-- light theme icon -->
+                <i class="light_theme_icon fa-solid fa-sun !hidden"></i>
+              </button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="max-w-[700px] mx-auto">
+      <main class="md:ml-8 mb-10">
+        <!-- about me -->
+        <section class="section" id="about">
+          <h2 class="font-teko text-4xl md:text-6xl dark:text-slate-300">
+            Hi, I'm MD Abdul Majid!
+          </h2>
+
+          <div
+            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7"
+          >
+            <p class="mb-5">
+              I am a backend-heavy full-stack developer and a self-learner. I am
+              experienced for more than 3 years and working with
+              <a
+                href="https://laravel.com"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >Laravel</a
+              >,
+              <a
+                href="https://laravel-livewire.com"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >Livewire</a
+              >,
+              <a
+                href="https://jquery.com/"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >jQuery</a
+              >, and
+              <a
+                href="https://alpinejs.dev/"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >AlpineJS</a
+              >. I am also experienced in
+              <a
+                href="https://vuejs.org/"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >VueJS</a
+              >,
+              <a
+                href="https://laravel.com/docs/10.x/queues"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >Queue</a
+              >,
+              <a
+                href="https://laravel.com/docs/10.x/scheduling"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >Task Scheduling</a
+              >, VPS Server, CI/CD, and Docker (Basic). I love the beauty of
+              <a
+                href="https://laravel.com/docs/10.x/eloquent"
+                target="_blank"
+                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                >Laravel ORM</a
+              >.
+            </p>
+            <p class="mb-5">
+              My aim is to bring across your message and identity in the most
+              creative way.
+            </p>
+            <p class="mb-5">
+              I love to share my knowledge, mostly technical. I enjoy learning
+              new things and building something new.
+            </p>
+          </div>
+
+          <!-- recent development projects & social profiles -->
+          <div
+            class="flex-none md:flex mt-8 md:pt-8 md:border-t border-slate-900/10 dark:border-gray-700"
+          >
+            <div class="md:max-w-md">
+              <h2 class="font-teko text-3xl dark:text-slate-300">
+                Recent Development Projects
+              </h2>
+              <div class="flex flex-col mt-5">
+                <a
+                  href="https://stage.netoglasi.net/"
+                  target="_blank"
+                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  >Netoglasi - An ad agency website like Bikroy.com</a
+                >
+
+                <a
+                  href="http://essenceonlinebd.com/"
+                  target="_blank"
+                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  >Essence Online BD - A complete E-commerce website
+                </a>
+
+                <a
+                  href="https://studio23.com.bd/"
+                  target="_blank"
+                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  >Studio23 - A boutique hotel website</a
+                >
+
+                <a
+                  href="https://examcare24.com/"
+                  target="_blank"
+                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  >Examcare24 - Online Examination System</a
+                >
+              </div>
+            </div>
+            <div class="mt-8 md:mt-0 md:ml-12">
+              <h2 class="font-teko text-3xl dark:text-slate-300">
+                Social Profiles
+              </h2>
+              <div class="my-5">
+                <a
+                  href="https://facebook.com/abdulmajidcse/"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2.5 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >
+                  <i class="fa-brands fa-facebook-f text-xl"></i>
+                </a>
+
+                <a
+                  href="https://hackerrank.com/abdulmajidcse/"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >
+                  <i class="fa-brands fa-hackerrank text-xl"></i>
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/abdulmajidcse"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                  ><i class="fa-brands fa-linkedin-in text-xl"></i
+                ></a>
+
+                <a
+                  href="https://github.com/abdulmajidcse/"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                  ><i class="fa-brands fa-github text-xl"></i
+                ></a>
+
+                <a
+                  href="https://www.youtube.com/@abdulmajidcse/"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                  ><i class="fa-brands fa-youtube text-xl"></i
+                ></a>
+
+                <a
+                  href="https://twitter.com/abdulmajidcse/"
+                  target="_blank"
+                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                  ><i class="fa-brands fa-twitter text-xl"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- skills -->
+        <section id="skills" class="section">
+          <h2 class="font-teko text-5xl">Skills</h2>
+
+          <!-- professional experience -->
+          <div class="mt-6">
+            <h3 class="font-teko text-3xl dark:text-gray-300">
+              Professional Experience
+            </h3>
+            <p class="font-poppins dark:text-gray-400">
+              I am professional on these Technologies. Most of the time I work
+              on these
+            </p>
+
+            <div class="my-4 font-poppins">
+              <a
+                href="https://www.php.net/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >PHP</a
+              >
+              <a
+                href="https://www.mysql.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >MySQL</a
+              >
+              <a
+                href="https://laravel.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Laravel</a
+              >
+              <a
+                href="https://laravel-livewire.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Livewire</a
+              >
+              <a
+                href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >JavaScript</a
+              >
+              <a
+                href="https://jquery.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >jQuery</a
+              >
+              <a
+                href="https://vuejs.org/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >VueJS</a
+              >
+              <a
+                href="https://www.typescriptlang.org/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >TypeScript</a
+              >
+              <a
+                href="https://getbootstrap.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Bootstrap</a
+              >
+              <a
+                href="https://tailwindcss.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >TailwindCSS</a
+              >
+              <a
+                href="https://git-scm.com/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Git</a
+              >
+              <a
+                href="https://dev.mysql.com/downloads/workbench/"
+                target="_blank"
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Database Design</a
+              >
+              <span
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >API Development</span
+              >
+              <span
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Queue</span
+              >
+              <span
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >Task Scheduling</span
+              >
+              <span
+                class="bg-slate-300 text-gray-800 hover:text-white hover:theme-bg-color dark:bg-slate-400 dark:text-gray-900 dark:hover:text-white dark:hover:theme-bg-color px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                >VPS Server</span
+              >
+            </div>
+          </div>
+        </section>
+
+        <!-- Experience -->
+        <section id="experience" class="section">
+          <h2 class="font-teko text-5xl">Experience</h2>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  Software Engineer
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  <a
+                    href="https://www.nogorsolutions.com/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Nogor Solutions Limited</a
+                  >
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                March 03, 2024 - Present
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p class="mb-3">
+                As a Software Engineer, I build web application or custom
+                solutions.
+              </p>
+              <p class="mb-3">
+                We used the following tools and technologies for development.
+              </p>
+
+              <div>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Analyze System
+                  and Design According to Requirement.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Design Database
+                  Entity Relationship Diagram (ERD).
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Create RESTful
+                  API using PHP, Laravel.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Vuejs to build
+                  Single Page Application.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used Bootstrap
+                  for frontend design.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used MySQL as a
+                  primary database.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Utilized: PHP,
+                  MySQL, Laravel, Vuejs.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  Programmer - Remotely
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  <a
+                    href="https://createchbd.com/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Creative Technology</a
+                  >
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                September 01, 2020 - February 29, 2024
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p class="mb-3">
+                As a developer, I design and develop a web application for
+                Government and Private Institutes
+              </p>
+              <p class="mb-3">
+                We used the following tools and technologies for development.
+              </p>
+
+              <div>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Analyze System
+                  and Design According to Requirement.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Design Database
+                  Entity Relationship Diagram (ERD).
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Create RESTful
+                  API using PHP, Laravel.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used Bootstrap
+                  and TailwindCSS for frontend design.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used MySQL as a
+                  primary database.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Utilized: PHP,
+                  MySQL, Laravel, Livewire.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  Laravel Developer - Remotely
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  <a
+                    href="https://stage.netoglasi.net/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Netoglasi</a
+                  >
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                September 24, 2023 - January 31, 2024
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p class="mb-3">
+                As a Laravel developer, I design and develop netoglasi webiste.
+                This is an ad agency webiste like Bikroy.com.
+              </p>
+              <p class="mb-3">
+                We used the following tools and technologies for development.
+              </p>
+
+              <div>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Analyze System
+                  and Design According to Requirement.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Design Database
+                  Entity Relationship Diagram (ERD).
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Develop
+                  application using PHP, Laravel, jQuery, Axios.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used
+                  TailwindCSS for frontend design.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Used MySQL as a
+                  primary database.
+                </p>
+                <p>
+                  <i class="fa-solid fa-check text-lg mr-1"></i> Utilized: PHP,
+                  MySQL, Laravel, jQuery, Queue, Task Scheduling, VPS Server.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  Freelancer
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  <a
+                    href="https://fiverr.com/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Fiverr</a
+                  >
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                December, 2022 - December, 2023
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p class="mb-3">
+                As a Laravel developer, I customize Fiverr client website and
+                application with their requirements.
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Education -->
+        <section id="education" class="section">
+          <h2 class="font-teko text-5xl">Education</h2>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  <a
+                    href="https://diu.ac/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Dhaka International University</a
+                  >
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  Bachelor of Science
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                August 2022 - Present
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p>Computer Science and Engineering</p>
+              <p>CGPA: (Studying)</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  <a
+                    href="https://europeanit-inst.com/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >European IT Solutions Institute</a
+                  >
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  Industrial Attachment
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                January 2020 - March 2020
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p>Web Development with Laravel</p>
+            </div>
+          </div>
+
+          <div class="mt-8">
+            <div class="grid md:grid-cols-2">
+              <div>
+                <h3 class="font-teko text-4xl text-gray-800 dark:text-gray-300">
+                  <a
+                    href="https://kpik.gov.bd/"
+                    target="_blank"
+                    class="hover:theme-text-color hover:underline"
+                    >Kurigram Polytechnic Institute</a
+                  >
+                </h3>
+                <p class="font-teko text-3xl text-gray-600 dark:text-gray-400">
+                  Diploma in Engineering
+                </p>
+              </div>
+
+              <div
+                class="text-start md:text-end font-poppins text-sm text-blue-800 dark:theme-text-color"
+              >
+                August 2016 - December 2020
+              </div>
+            </div>
+
+            <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+              <p>Computer Technology</p>
+              <p>CGPA: 3.71 (Out of 4.00)</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- Portfolio -->
+        <section id="portfolio" class="section">
+          <h2 class="font-teko text-5xl">Some Development Projects</h2>
+          <div class="my-4 font-poppins text-slate-700 dark:text-white/70">
+            <p class="mb-3">
+              I developed number of projects last 3 years. Among those few are
+              added here.
+            </p>
+          </div>
+
+          <div class="grid md:grid-cols-2 gap-6 mt-8">
+            <div
+              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-blue-800 transition-all duration-300"
+            >
+              <a href="https://stage.netoglasi.net/" target="_blank">
+                <div
+                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
+                >
+                  <img
+                    src="./dist/img/netoglasi.png"
+                    alt="Project View"
+                    class="w-full h-44"
+                  />
+                </div>
+                <div class="m-1">
+                  <h3
+                    class="font-teko text-2xl uppercase text-gray-800 dark:text-gray-300 group-hover:text-white"
+                  >
+                    Netoglasi
+                  </h3>
+                  <p
+                    class="font-poppins text-gray-600 dark:text-gray-400 group-hover:text-white/70"
+                  >
+                    An ad agency website like Bikroy.com.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-blue-800 transition-all duration-300"
+            >
+              <a href="http://essenceonlinebd.com/" target="_blank">
+                <div
+                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
+                >
+                  <img
+                    src="./dist/img/essenceonlinebd.png"
+                    alt="Project View"
+                    class="w-full h-44"
+                  />
+                </div>
+                <div class="m-1">
+                  <h3
+                    class="font-teko text-2xl uppercase text-gray-800 dark:text-gray-300 group-hover:text-white"
+                  >
+                    Essence Online BD
+                  </h3>
+                  <p
+                    class="font-poppins text-gray-600 dark:text-gray-400 group-hover:text-white/70"
+                  >
+                    A complete E-commerce website.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-blue-800 transition-all duration-300"
+            >
+              <a href="https://studio23.com.bd/" target="_blank">
+                <div
+                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
+                >
+                  <img
+                    src="./dist/img/studio23.png"
+                    alt="Project View"
+                    class="w-full h-44"
+                  />
+                </div>
+                <div class="m-1">
+                  <h3
+                    class="font-teko text-2xl uppercase text-gray-800 dark:text-gray-300 group-hover:text-white"
+                  >
+                    Studio23
+                  </h3>
+                  <p
+                    class="font-poppins text-gray-600 dark:text-gray-400 group-hover:text-white/70"
+                  >
+                    A boutique hotel website.
+                  </p>
+                </div>
+              </a>
+            </div>
+
+            <div
+              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-blue-800 transition-all duration-300"
+            >
+              <a href="https://examcare24.com/" target="_blank">
+                <div
+                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
+                >
+                  <img
+                    src="./dist/img/examcare24.png"
+                    alt="Project View"
+                    class="w-full h-44"
+                  />
+                </div>
+                <div class="m-1">
+                  <h3
+                    class="font-teko text-2xl uppercase text-gray-800 dark:text-gray-300 group-hover:text-white"
+                  >
+                    Examcare24
+                  </h3>
+                  <p
+                    class="font-poppins text-gray-600 dark:text-gray-400 group-hover:text-white/70"
+                  >
+                    An Online Examination System where an examinee can test
+                    their skills.
+                  </p>
+                </div>
+              </a>
+            </div>
+          </div>
+        </section>
+
+        <!-- Interests -->
+        <section class="section" id="interests">
+          <h2 class="font-teko text-5xl">Interests</h2>
+          <div
+            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
+          >
+            <div>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Programming</p>
+              <p>
+                <i class="fa-solid fa-check text-lg mr-1"></i> Problem Solving
+              </p>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Research</p>
+              <p><i class="fa-solid fa-check text-lg mr-1"></i> Traveling</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- contact -->
+        <section class="section" id="contact">
+          <h2 class="font-teko text-5xl">Contact</h2>
+          <div
+            class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
+          >
+            <p class="mb-5">
+              Feel free to contact with me. I am available for hire and I'll be
+              your Web Developer for your project or web application.
+            </p>
+            <p class="mb-5">
+              If you want to hire me or need a consultant, send a message to my
+              <a
+                href="https://facebook.com/abdulmajidcse"
+                target="_blank"
+                class="text-white bg-blue-800 hover:theme-bg-color px-2 py-1 rounded"
+                >Facebook</a
+              >
+              or
+              <a
+                href="https://www.linkedin.com/in/abdulmajidcse"
+                target="_blank"
+                class="text-white bg-blue-800 hover:theme-bg-color px-2 py-1 rounded"
+                >LinkedIn</a
+              >
+              inbox.
+            </p>
+            <p>
+              I am very glad you are interested about me.
+              <span
+                class="before:block before:absolute before:-inset-1 before:-skew-y-3 before:theme-bg-color relative inline-block"
+              >
+                <span class="relative text-white">Thank you</span>
+              </span>
+              so much for your time!
+            </p>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <footer class="footer">
+      <p>&copy; 2024 Abdul Majid. All rights are reserved.</p>
+    </footer>
+
+    <script src="./dist/js/flowbite.js"></script>
+    <script src="./dist/js/app.js"></script>
+  </body>
+</html>

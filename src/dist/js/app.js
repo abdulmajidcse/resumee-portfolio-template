@@ -19,17 +19,17 @@ function toggleTheme(dontChange = false) {
     }
   }
 
-  const lightThemeTag = document.getElementById("light_theme_icon");
-  const darkThemeTag = document.getElementById("dark_theme_icon");
+  const lightThemeTag = document.querySelectorAll(".light_theme_icon");
+  const darkThemeTag = document.querySelectorAll(".dark_theme_icon");
 
   if (localStorage.getItem("theme") === "dark") {
     document.documentElement.classList.add("dark");
-    darkThemeTag.classList.add("!hidden");
-    lightThemeTag.classList.remove("!hidden");
+    darkThemeTag.forEach((dark) => dark.classList.add("!hidden"));
+    lightThemeTag.forEach((light) => light.classList.remove("!hidden"));
   } else {
     document.documentElement.classList.remove("dark");
-    lightThemeTag.classList.add("!hidden");
-    darkThemeTag.classList.remove("!hidden");
+    lightThemeTag.forEach((light) => light.classList.add("!hidden"));
+    darkThemeTag.forEach((dark) => dark.classList.remove("!hidden"));
   }
 }
 
