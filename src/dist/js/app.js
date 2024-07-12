@@ -36,35 +36,6 @@ function toggleTheme(dontChange = false) {
 // when page load
 window.addEventListener("load", function () {
   toggleTheme(true);
-
-  const sections = document.querySelectorAll(".section");
-  sections.forEach(function (section) {
-    if (section.hasAttribute("id")) {
-      const linkName = `#${section.getAttribute("id")}`;
-      // We are creating a new IntersectionObserver instance
-      let observerInit = new IntersectionObserver(
-        (entries, observer) => {
-          // This takes a callback function that receives two arguments: the elements list and the observer instance.
-          entries.forEach((entry) => {
-            // `entry.isIntersecting` will be true if the element is visible
-            if (entry.isIntersecting) {
-              const sidebarLinks = document.querySelectorAll("a.scrollspy");
-              sidebarLinks.forEach(function (sidebarLink) {
-                if (sidebarLink.getAttribute("href") == linkName) {
-                  sidebarLink.classList.add("active");
-                } else {
-                  sidebarLink.classList.remove("active");
-                }
-              });
-            }
-          });
-        },
-        { rootMargin: "-300px 0px -50px 0px" }
-      );
-      // Adding the observer to the element
-      observerInit.observe(section);
-    }
-  });
 });
 
 //   sidebar
@@ -90,12 +61,4 @@ window.addEventListener("alpine:init", function () {
   windowWidthLg.addEventListener("change", sidebarHideOnMobile);
 
   sidebarHideOnMobile(windowWidthLg);
-
-  // scrollspy fuctionality
-  const scrollspys = document.querySelectorAll("a.scrollspy");
-  scrollspys.forEach(function (anchorTag) {
-    anchorTag.addEventListener("click", function (e) {
-      sidebarHideOnMobile(windowWidthLg);
-    });
-  });
 });
