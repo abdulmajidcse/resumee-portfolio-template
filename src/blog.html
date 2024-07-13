@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Contact | Abdul Majid - Software Engineer</title>
+    <title>Blog | Abdul Majid - Software Engineer</title>
     <link rel="icon" type="image/x-icon" href="./dist/img/abdul-majid.jpg" />
 
     <meta name="robots" content="ALL, FOLLOW, INDEX" />
@@ -229,31 +229,12 @@
     <div class="max-w-[700px] mx-auto">
       <main class="md:ml-8 mb-10">
         <!-- contact -->
-        <section class="section" id="contact">
-          <h2 class="font-teko text-5xl">Contact</h2>
+        <section class="section" id="blog">
+          <h2 class="font-teko text-5xl">Blog</h2>
           <div
             class="font-poppins text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
           >
-            <p class="mb-5">
-              Feel free to contact with me. I am available for hire.
-            </p>
-            <p class="mb-5">
-              If you want to hire me or need a consultant, send a message to my
-              <a
-                href="https://facebook.com/abdulmajidcse"
-                target="_blank"
-                class="text-white bg-blue-800 hover:bg-blue-600 px-2 py-1 rounded"
-                >Facebook</a
-              >
-              or
-              <a
-                href="https://www.linkedin.com/in/abdulmajidcse"
-                target="_blank"
-                class="text-white bg-blue-800 hover:bg-blue-600 px-2 py-1 rounded"
-                >LinkedIn</a
-              >
-              inbox.
-            </p>
+            <h3 class="font-poppins text-4xl mb-10">Coming Soon...</h3>
             <p>
               I am very glad you are interested about me.
               <span
@@ -264,104 +245,6 @@
               so much for your time!
             </p>
           </div>
-
-          <form
-            @submit.prevent="alert('I am very glad you are interested about me. Currently, this contact form is not working. Please, send me a message via Facebook or LinkedIn. Thank you so much for your time!')"
-            class="font-poppins pt-12 border-t border-slate-300 dark:border-gray-700"
-          >
-            <div class="grid md:grid-cols-2 md:gap-6">
-              <div class="mb-6">
-                <label
-                  for="first_name"
-                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                  >First Name</label
-                >
-                <input
-                  type="text"
-                  id="first_name"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
-              </div>
-
-              <div class="mb-6">
-                <label
-                  for="last_name"
-                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                  >Last Name</label
-                >
-                <input
-                  type="text"
-                  id="last_name"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="mobile"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Mobile No</label
-              >
-              <input
-                type="text"
-                id="mobile"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="subject"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Subject</label
-              >
-              <input
-                type="text"
-                id="subject"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                rows="6"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 uppercase"
-            >
-              <strong>Submit Query</strong>
-            </button>
-          </form>
         </section>
       </main>
     </div>
