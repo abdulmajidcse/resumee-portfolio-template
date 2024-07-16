@@ -69,17 +69,6 @@
 
         <div class="flex gap-2 pr-4 md:pr-0 pb-8 md:pb-0">
           <button
-            onclick="toggleTheme()"
-            type="button"
-            class="theme-button md:hidden"
-          >
-            <!-- dark theme icon -->
-            <i class="dark_theme_icon fa-solid fa-moon !hidden"></i>
-            <!-- light theme icon -->
-            <i class="light_theme_icon fa-solid fa-sun !hidden"></i>
-          </button>
-
-          <button
             data-collapse-toggle="navbar-dropdown"
             type="button"
             class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
@@ -129,23 +118,15 @@
             <li>
               <a
                 href="./index.html"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300 active"
-                aria-current="page"
-                >Home</a
-              >
-            </li>
-            <li>
-              <a
-                href="./blog.html"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
-                >Blog</a
-              >
-            </li>
-            <li>
-              <a
-                href="./about.html"
                 class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
                 >About</a
+              >
+            </li>
+            <li>
+              <a
+                href="javascript:void(0)"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
+                >Socials</a
               >
             </li>
             <li>
@@ -159,21 +140,9 @@
             <li>
               <a
                 href="./contact.html"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 dark:border-slate-700/50 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300 active"
                 >Contact</a
               >
-            </li>
-            <li class="hidden md:block">
-              <button
-                onclick="toggleTheme()"
-                type="button"
-                class="theme-button mt-2"
-              >
-                <!-- dark theme icon -->
-                <i class="dark_theme_icon fa-solid fa-moon !hidden"></i>
-                <!-- light theme icon -->
-                <i class="light_theme_icon fa-solid fa-sun !hidden"></i>
-              </button>
             </li>
           </ul>
 
@@ -226,7 +195,7 @@
       </div>
     </nav>
 
-    <div class="max-w-[700px] mx-auto">
+    <div class="max-w-[750px] mx-auto min-h-[calc(100vh-210px)]">
       <main class="md:ml-8 mb-10">
         <!-- contact -->
         <section class="section" id="contact">
@@ -264,104 +233,6 @@
               so much for your time!
             </p>
           </div>
-
-          <form
-            @submit.prevent="alert('I am very glad you are interested about me. Currently, this contact form is not working. Please, send me a message via Facebook or LinkedIn. Thank you so much for your time!')"
-            class="font-poppins pt-12 border-t border-slate-300 dark:border-gray-700"
-          >
-            <div class="grid md:grid-cols-2 md:gap-6">
-              <div class="mb-6">
-                <label
-                  for="first_name"
-                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                  >First Name</label
-                >
-                <input
-                  type="text"
-                  id="first_name"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
-              </div>
-
-              <div class="mb-6">
-                <label
-                  for="last_name"
-                  class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                  >Last Name</label
-                >
-                <input
-                  type="text"
-                  id="last_name"
-                  class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                  required
-                />
-              </div>
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="email"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Email</label
-              >
-              <input
-                type="email"
-                id="email"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="mobile"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Mobile No</label
-              >
-              <input
-                type="text"
-                id="mobile"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="subject"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Subject</label
-              >
-              <input
-                type="text"
-                id="subject"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              />
-            </div>
-
-            <div class="mb-6">
-              <label
-                for="message"
-                class="block mb-2 text-base font-medium text-gray-900 dark:text-white"
-                >Message</label
-              >
-              <textarea
-                id="message"
-                rows="6"
-                class="shadow-sm bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500 dark:shadow-sm-light"
-                required
-              ></textarea>
-            </div>
-
-            <button
-              type="submit"
-              class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800 uppercase"
-            >
-              <strong>Submit Query</strong>
-            </button>
-          </form>
         </section>
       </main>
     </div>
@@ -371,6 +242,5 @@
     </footer>
 
     <script src="./dist/js/flowbite.js"></script>
-    <script src="./dist/js/app.js"></script>
   </body>
 </html>

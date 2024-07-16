@@ -1,6 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: "class",
   content: ["./src/**/*.{html,js}"],
   theme: {
     extend: {
@@ -10,8 +9,5 @@ module.exports = {
       },
     },
   },
-  plugins: [
-    require("tailwind-scrollbar")({ nocompatible: true }),
-    require("flowbite/plugin"),
-  ],
+  plugins: [require("flowbite/plugin")],
 };
