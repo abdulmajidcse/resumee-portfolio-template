@@ -4,8 +4,9 @@ module.exports = {
   theme: {
     extend: {
       fontFamily: {
-        teko: ["Teko", "sans-serif"],
-        poppins: ["Poppins", "sans-serif"],
+        "playfair-display": ["Playfair Display", "sans-serif"],
+        "libre-baskerville": ["Libre Baskerville", "sans-serif"],
+        lato: ["Lato", "sans-serif"],
       },
     },
   },
