@@ -48,17 +48,15 @@
     <script defer src="./dist/js/alpinejs.min.js"></script>
   </head>
   <body
-    class="bg-white dark:bg-slate-900 dark:text-gray-100 transition-all duration-300 bg-[url('./../img/dots.svg')] font-libre-baskerville"
+    class="bg-white bg-center bg-repeat antialiased bg-[url('./../img/dots.svg')] font-libre-baskerville"
   >
-    <nav
-      class="pt-3 pb-0 md:py-3 border-b border-slate-900/10 dark:border-gray-700"
-    >
+    <nav class="pt-6 md:p-6 border-b border-slate-900/10">
       <div
-        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto pt-4 pb-0 md:p-4"
+        class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto"
       >
         <a
           href="./index.html"
-          class="flex items-center space-x-3 rtl:space-x-reverse pl-4 md:pl-0 pb-8 md:pb-0 text-slate-800 hover:text-slate-500"
+          class="ml-4 md:ml-0 mb-8 md:mb-0 text-slate-800 hover:text-slate-500"
         >
           <span
             class="font-lato self-center text-2xl font-extrabold whitespace-nowrap"
@@ -70,7 +68,7 @@
           <button
             data-collapse-toggle="navbar-dropdown"
             type="button"
-            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+            class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
             aria-controls="navbar-dropdown"
             aria-expanded="false"
             x-data="{open: false}"
@@ -97,7 +95,7 @@
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 30 30"
-              class="w-5 h-5 dark:fill-white"
+              class="w-5 h-5"
               x-show="open"
             >
               <path
@@ -108,15 +106,15 @@
         </div>
 
         <div
-          class="hidden w-full md:block md:w-auto px-5 md:px-0 bg-slate-100 md:bg-inherit dark:bg-slate-800/50 dark:md:bg-inherit border-t md:border-t-0 border-slate-900/10 dark:border-gray-700"
+          class="hidden w-full md:block md:w-auto px-5 md:px-0 bg-slate-100 md:bg-inherit border-t md:border-t-0 border-slate-900/10"
           id="navbar-dropdown"
         >
           <ul
-            class="flex flex-col font-medium md:px-4 py-4 md:p-0 md:space-x-8 rtl:space-x-reverse md:flex-row"
+            class="flex flex-col font-medium md:px-4 md:p-0 md:space-x-4 md:flex-row"
           >
             <li class="md:hidden">
               <span
-                class="font-lato uppercase font-bold text-slate-900 block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 md:border-b-0"
+                class="font-lato text-md uppercase font-extrabold text-slate-900 block py-4 md:py-2 md:px-2 rounded md:p-0"
                 >Menu</span
               >
             </li>
@@ -124,84 +122,37 @@
             <li>
               <a
                 href="./index.html"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300 active"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-t border-slate-900 md:border-t-0 hover:text-slate-500 font-extrabold"
                 >About</a
               >
             </li>
             <li>
               <a
                 href="javascript:void(0)"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-t border-slate-900 md:border-t-0 hover:text-slate-500"
                 >Socials</a
               >
             </li>
             <li>
               <a
-                href="https://www.youtube.com/@abdulmajidcse/"
-                target="_blank"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
-                >Screencasts</a
+                href="javascript:void(0)"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-t border-slate-900 md:border-t-0 hover:text-slate-500"
+                >Projects</a
               >
             </li>
             <li>
               <a
                 href="./contact.html"
-                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-b border-slate-900/10 md:border-b-0 hover:text-slate-600 dark:hover:text-slate-300"
+                class="block py-4 md:py-2 md:px-2 rounded md:p-0 border-t border-slate-900 md:border-t-0 hover:text-slate-500"
                 >Contact</a
               >
             </li>
           </ul>
-
-          <div class="my-5 md:hidden">
-            <a
-              href="https://facebook.com/abdulmajidcse/"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2.5 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-            >
-              <i class="fa-brands fa-facebook-f text-xl"></i>
-            </a>
-
-            <a
-              href="https://hackerrank.com/abdulmajidcse/"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-            >
-              <i class="fa-brands fa-hackerrank text-xl"></i>
-            </a>
-
-            <a
-              href="https://www.linkedin.com/in/abdulmajidcse"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-              ><i class="fa-brands fa-linkedin-in text-xl"></i
-            ></a>
-
-            <a
-              href="https://github.com/abdulmajidcse/"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-              ><i class="fa-brands fa-github text-xl"></i
-            ></a>
-
-            <a
-              href="https://www.youtube.com/@abdulmajidcse/"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-              ><i class="fa-brands fa-youtube text-xl"></i
-            ></a>
-
-            <a
-              href="https://twitter.com/abdulmajidcse/"
-              target="_blank"
-              class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-              ><i class="fa-brands fa-twitter text-xl"></i
-            ></a>
-          </div>
         </div>
       </div>
     </nav>
 
-    <div class="max-w-[750px] mx-auto">
+    <div class="max-w-[750px] mx-auto min-h-[calc(100vh-180px)]">
       <main class="md:ml-8 mb-10">
         <!-- about me -->
         <section class="section" id="about">
@@ -209,76 +160,75 @@
             <img
               src="./dist/img/abdul-majid.jpg"
               alt="Abdul Majid"
-              class="rounded-full shadow-xl w-[250px] h-[250px] border-[0.5rem] border-slate-200 dark:border-slate-800/50"
+              class="rounded-full shadow-xl w-[250px] h-[250px] border-[0.5rem] border-slate-200"
             />
           </div>
 
           <div class="text-center mt-2">
-            <h2
-              class="font-playfair-display uppercase text-2xl font-medium dark:text-slate-300"
-            >
+            <h2 class="font-playfair-display uppercase text-2xl font-medium">
               MD Abdul Majid
             </h2>
             <p>Software Engineer</p>
             <p>
-              <a href="https://nogorsolutions.com" target="_blank"
+              <a
+                href="https://nogorsolutions.com"
+                target="_blank"
+                class="hover:underline"
                 >@Nogor Solutions Limited</a
               >
             </p>
           </div>
 
-          <div
-            class="font-libre-baskerville text-lg text-slate-700 dark:text-white/70 mt-7"
-          >
+          <div class="font-libre-baskerville text-lg text-slate-900 mt-7">
             <p class="mb-5">
               I am a backend-heavy full-stack developer and a self-learner. I am
               experienced for more than 3 years and working with
               <a
                 href="https://laravel.com"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >Laravel</a
               >,
               <a
                 href="https://laravel-livewire.com"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >Livewire</a
               >,
               <a
                 href="https://jquery.com/"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >jQuery</a
               >, and
               <a
                 href="https://alpinejs.dev/"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >AlpineJS</a
               >. I am also experienced in
               <a
                 href="https://vuejs.org/"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >VueJS</a
               >,
               <a
                 href="https://laravel.com/docs/10.x/queues"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >Queue</a
               >,
               <a
                 href="https://laravel.com/docs/10.x/scheduling"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >Task Scheduling</a
               >, VPS Server, CI/CD, and Docker (Basic). I love the beauty of
               <a
                 href="https://laravel.com/docs/10.x/eloquent"
                 target="_blank"
-                class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80"
+                class="font-bold underline"
                 >Laravel ORM</a
               >.
             </p>
@@ -295,11 +245,11 @@
 
           <!-- recent development projects & social profiles -->
           <div
-            class="flex-none md:flex mt-8 md:pt-8 md:border-t border-slate-900/10 dark:border-gray-700"
+            class="flex-none md:flex mt-8 md:pt-8 md:border-t border-slate-900/10"
           >
             <div class="md:max-w-md">
               <h2
-                class="font-playfair-display uppercase text-xl dark:text-slate-300"
+                class="text-slate-900 font-playfair-display text-2xl font-bold"
               >
                 Recent Development Projects
               </h2>
@@ -307,82 +257,30 @@
                 <a
                   href="https://stage.netoglasi.net/"
                   target="_blank"
-                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  class="underline border-t border-slate-900/10 py-3"
                   >Netoglasi - An ad agency website like Bikroy.com</a
                 >
 
                 <a
                   href="http://essenceonlinebd.com/"
                   target="_blank"
-                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  class="underline border-t border-slate-900/10 py-3"
                   >Essence Online BD - A complete E-commerce website
                 </a>
 
                 <a
                   href="https://studio23.com.bd/"
                   target="_blank"
-                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  class="underline border-t border-slate-900/10 py-3"
                   >Studio23 - A boutique hotel website</a
                 >
 
                 <a
                   href="https://examcare24.com/"
                   target="_blank"
-                  class="text-blue-500 hover:text-slate-800 dark:text-blue-400 dark:hover:text-white/80 border-t border-slate-900/10 dark:border-gray-700 py-3"
+                  class="underline border-t border-slate-900/10 py-3"
                   >Examcare24 - Online Examination System</a
                 >
-              </div>
-            </div>
-            <div class="mt-8 md:mt-0 md:ml-12">
-              <h2
-                class="font-playfair-display uppercase text-3xl dark:text-slate-300"
-              >
-                Social Profiles
-              </h2>
-              <div class="my-5">
-                <a
-                  href="https://facebook.com/abdulmajidcse/"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2.5 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                >
-                  <i class="fa-brands fa-facebook-f text-xl"></i>
-                </a>
-
-                <a
-                  href="https://hackerrank.com/abdulmajidcse/"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                >
-                  <i class="fa-brands fa-hackerrank text-xl"></i>
-                </a>
-
-                <a
-                  href="https://www.linkedin.com/in/abdulmajidcse"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                  ><i class="fa-brands fa-linkedin-in text-xl"></i
-                ></a>
-
-                <a
-                  href="https://github.com/abdulmajidcse/"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                  ><i class="fa-brands fa-github text-xl"></i
-                ></a>
-
-                <a
-                  href="https://www.youtube.com/@abdulmajidcse/"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                  ><i class="fa-brands fa-youtube text-xl"></i
-                ></a>
-
-                <a
-                  href="https://twitter.com/abdulmajidcse/"
-                  target="_blank"
-                  class="text-white bg-blue-800 hover:bg-slate-900 dark:bg-blue-600 dark:hover:bg-slate-600 px-2 pt-2 pb-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
-                  ><i class="fa-brands fa-twitter text-xl"></i
-                ></a>
               </div>
             </div>
           </div>
@@ -390,107 +288,109 @@
 
         <!-- skills -->
         <section id="skills" class="section font-libre-baskerville">
-          <h2 class="font-playfair-display uppercase text-5xl">Skills</h2>
+          <h2
+            class="text-slate-900 font-playfair-display text-4xl uppercase font-bold"
+          >
+            Skills
+          </h2>
 
           <!-- professional experience -->
           <div class="mt-6">
-            <h3
-              class="font-playfair-display uppercase text-3xl dark:text-gray-300"
-            >
+            <h3 class="font-lato uppercase font-bold text-xl text-slate-900">
               Professional Experience
             </h3>
-            <p class="font-libre-baskerville dark:text-gray-400">
+            <p class="font-libre-baskerville">
               I am professional on these Technologies. Most of the time I work
-              on these
+              on these.
             </p>
 
             <div class="my-4 font-libre-baskerville">
               <a
                 href="https://www.php.net/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >PHP</a
               >
               <a
                 href="https://www.mysql.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >MySQL</a
               >
               <a
                 href="https://laravel.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Laravel</a
               >
               <a
                 href="https://laravel-livewire.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Livewire</a
               >
               <a
                 href="https://developer.mozilla.org/en-US/docs/Web/JavaScript"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >JavaScript</a
               >
               <a
                 href="https://jquery.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >jQuery</a
               >
               <a
                 href="https://vuejs.org/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >VueJS</a
               >
               <a
                 href="https://www.typescriptlang.org/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >TypeScript</a
               >
               <a
                 href="https://getbootstrap.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Bootstrap</a
               >
               <a
                 href="https://tailwindcss.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >TailwindCSS</a
               >
               <a
                 href="https://git-scm.com/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Git</a
               >
               <a
                 href="https://dev.mysql.com/downloads/workbench/"
                 target="_blank"
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Database Design</a
               >
               <span
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2 cursor-pointer"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >API Development</span
               >
               <span
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2 cursor-pointer"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Queue</span
               >
               <span
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2 cursor-pointer"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >Task Scheduling</span
               >
               <span
-                class="bg-slate-300/50 text-slate-500 hover:text-slate-900 dark:text-slate-500 dark:hover:text-slate-100 dark:bg-slate-800/50 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2 cursor-pointer"
+                class="bg-slate-300/50 text-slate-900 hover:text-slate-500 px-2 py-1 rounded transition-all duration-300 inline-block mr-1 mb-2"
                 >VPS Server</span
               >
             </div>
@@ -499,38 +399,38 @@
 
         <!-- Experience -->
         <section id="experience" class="section">
-          <h2 class="font-playfair-display uppercase text-5xl">Experience</h2>
+          <h2
+            class="text-slate-900 font-playfair-display text-4xl uppercase font-bold"
+          >
+            Experience
+          </h2>
 
           <div class="mt-8">
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Software Engineer
                 </h3>
-                <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
-                >
+                <p class="font-lato uppercase font-bold text-xl text-slate-900">
                   <a
                     href="https://www.nogorsolutions.com/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Nogor Solutions Limited</a
                   >
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                March 03, 2024 - Present
+                Mar 03, 2024 - Present
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p class="mb-3">
                 As a Software Engineer, I build web application or custom
                 solutions.
@@ -576,32 +476,28 @@
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Programmer - Remotely
                 </h3>
-                <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
-                >
+                <p class="font-lato uppercase font-bold text-xl text-slate-900">
                   <a
                     href="https://createchbd.com/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Creative Technology</a
                   >
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                September 01, 2020 - February 29, 2024
+                Sep 01, 2020 - Feb 29, 2024
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p class="mb-3">
                 As a developer, I design and develop a web application for
                 Government and Private Institutes
@@ -643,32 +539,28 @@
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Laravel Developer - Remotely
                 </h3>
-                <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
-                >
+                <p class="font-lato uppercase font-bold text-xl text-slate-900">
                   <a
                     href="https://stage.netoglasi.net/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Netoglasi</a
                   >
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                September 24, 2023 - January 31, 2024
+                Sep 24, 2023 - Jan 31, 2024
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p class="mb-3">
                 As a Laravel developer, I design and develop netoglasi webiste.
                 This is an ad agency webiste like Bikroy.com.
@@ -710,32 +602,28 @@
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Freelancer
                 </h3>
-                <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
-                >
+                <p class="font-lato uppercase font-bold text-xl text-slate-900">
                   <a
                     href="https://fiverr.com/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Fiverr</a
                   >
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                December, 2022 - December, 2023
+                Dec 2022 - Dec 2023
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p class="mb-3">
                 As a Laravel developer, I customize Fiverr client website and
                 application with their requirements.
@@ -746,38 +634,40 @@
 
         <!-- Education -->
         <section id="education" class="section">
-          <h2 class="font-playfair-display uppercase text-5xl">Education</h2>
+          <h2
+            class="text-slate-900 font-playfair-display text-4xl uppercase font-bold"
+          >
+            Education
+          </h2>
 
           <div class="mt-8">
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-lato uppercase font-extrabold text-lg text-slate-900"
                 >
                   <a
                     href="https://diu.ac/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Dhaka International University</a
                   >
                 </h3>
                 <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Bachelor of Science
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                August 2022 - Present
+                Aug 2022 - Present
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p>Computer Science and Engineering</p>
               <p>CGPA: (Studying)</p>
             </div>
@@ -787,32 +677,30 @@
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-lato uppercase font-extrabold text-lg text-slate-900"
                 >
                   <a
                     href="https://europeanit-inst.com/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >European IT Solutions Institute</a
                   >
                 </h3>
                 <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Industrial Attachment
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                January 2020 - March 2020
+                Jan 2020 - Mar 2020
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p>Web Development with Laravel</p>
             </div>
           </div>
@@ -821,174 +709,44 @@
             <div class="grid md:grid-cols-2">
               <div>
                 <h3
-                  class="font-playfair-display uppercase text-4xl text-gray-800 dark:text-gray-300"
+                  class="font-lato uppercase font-extrabold text-lg text-slate-900"
                 >
                   <a
                     href="https://kpik.gov.bd/"
                     target="_blank"
-                    class="hover:theme-text-color hover:underline"
+                    class="hover:underline"
                     >Kurigram Polytechnic Institute</a
                   >
                 </h3>
                 <p
-                  class="font-playfair-display uppercase text-3xl text-gray-600 dark:text-gray-400"
+                  class="font-libre-baskerville font-bold text-lg text-slate-900"
                 >
                   Diploma in Engineering
                 </p>
               </div>
 
               <div
-                class="text-start md:text-end font-libre-baskerville text-sm text-blue-800 dark:theme-text-color"
+                class="text-start md:text-end font-libre-baskerville font-semibold text-sm text-slate-900"
               >
-                August 2016 - December 2020
+                Aug 2016 - Dec 2020
               </div>
             </div>
 
-            <div
-              class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-            >
+            <div class="my-4 font-libre-baskerville text-slate-800">
               <p>Computer Technology</p>
               <p>CGPA: 3.71 (Out of 4.00)</p>
             </div>
           </div>
         </section>
 
-        <!-- Portfolio -->
-        <section id="portfolio" class="section">
-          <h2 class="font-playfair-display uppercase text-5xl">
-            Some Development Projects
-          </h2>
-          <div
-            class="my-4 font-libre-baskerville text-slate-700 dark:text-white/70"
-          >
-            <p class="mb-3">
-              I developed number of projects last 3 years. Among those few are
-              added here.
-            </p>
-          </div>
-
-          <div class="grid md:grid-cols-2 gap-6 mt-8">
-            <div
-              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-300"
-            >
-              <a href="https://stage.netoglasi.net/" target="_blank">
-                <div
-                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
-                >
-                  <img
-                    src="./dist/img/netoglasi.png"
-                    alt="Project View"
-                    class="w-full h-44"
-                  />
-                </div>
-                <div class="m-1">
-                  <h3
-                    class="font-playfair-display uppercase text-2xl uppercase text-gray-800 dark:text-gray-300 dark:group-hover:text-white"
-                  >
-                    Netoglasi
-                  </h3>
-                  <p
-                    class="font-libre-baskerville text-gray-600 dark:text-gray-400 dark:group-hover:text-white/70"
-                  >
-                    An ad agency website like Bikroy.com.
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-300"
-            >
-              <a href="http://essenceonlinebd.com/" target="_blank">
-                <div
-                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
-                >
-                  <img
-                    src="./dist/img/essenceonlinebd.png"
-                    alt="Project View"
-                    class="w-full h-44"
-                  />
-                </div>
-                <div class="m-1">
-                  <h3
-                    class="font-playfair-display uppercase text-2xl uppercase text-gray-800 dark:text-gray-300 dark:group-hover:text-white"
-                  >
-                    Essence Online BD
-                  </h3>
-                  <p
-                    class="font-libre-baskerville text-gray-600 dark:text-gray-400 dark:group-hover:text-white/70"
-                  >
-                    A complete E-commerce website.
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-300"
-            >
-              <a href="https://studio23.com.bd/" target="_blank">
-                <div
-                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
-                >
-                  <img
-                    src="./dist/img/studio23.png"
-                    alt="Project View"
-                    class="w-full h-44"
-                  />
-                </div>
-                <div class="m-1">
-                  <h3
-                    class="font-playfair-display uppercase text-2xl uppercase text-gray-800 dark:text-gray-300 dark:group-hover:text-white"
-                  >
-                    Studio23
-                  </h3>
-                  <p
-                    class="font-libre-baskerville text-gray-600 dark:text-gray-400 dark:group-hover:text-white/70"
-                  >
-                    A boutique hotel website.
-                  </p>
-                </div>
-              </a>
-            </div>
-
-            <div
-              class="group border border-slate-300 dark:border-gray-700 rounded hover:bg-slate-200 dark:hover:bg-slate-800 transition-all duration-300"
-            >
-              <a href="https://examcare24.com/" target="_blank">
-                <div
-                  class="flex justify-center border-b border-slate-300 dark:border-gray-700"
-                >
-                  <img
-                    src="./dist/img/examcare24.png"
-                    alt="Project View"
-                    class="w-full h-44"
-                  />
-                </div>
-                <div class="m-1">
-                  <h3
-                    class="font-playfair-display uppercase text-2xl uppercase text-gray-800 dark:text-gray-300 dark:group-hover:text-white"
-                  >
-                    Examcare24
-                  </h3>
-                  <p
-                    class="font-libre-baskerville text-gray-600 dark:text-gray-400 dark:group-hover:text-white/70"
-                  >
-                    An Online Examination System where an examinee can test
-                    their skills.
-                  </p>
-                </div>
-              </a>
-            </div>
-          </div>
-        </section>
-
         <!-- Interests -->
         <section class="section" id="interests">
-          <h2 class="font-playfair-display uppercase text-5xl">Interests</h2>
-          <div
-            class="font-libre-baskerville text-lg text-slate-700 dark:text-white/70 mt-7 mb-10"
+          <h2
+            class="text-slate-900 font-playfair-display text-4xl uppercase font-bold"
           >
+            Interests
+          </h2>
+          <div class="font-libre-baskerville text-lg text-slate-800 mt-7 mb-10">
             <div>
               <p><i class="fa-solid fa-check text-lg mr-1"></i> Programming</p>
               <p>
